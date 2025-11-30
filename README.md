@@ -58,3 +58,25 @@ pip install -r requirements.txt
 1. 数据清洗与分析.ipynb
 2. 特征工程与预处理.ipynb
 3. 模型训练与解释.ipynb
+telecom-churn-prediction/
+├── data/                      # 数据目录
+│   ├── raw/                   # 原始数据
+│   │   ├── train.csv          # 训练集
+│   │   └── test.csv           # 测试集
+│   └── processed/             # 处理后的数据
+├── notebooks/                 # Jupyter笔记本
+│   ├── 01_数据清洗与探索性分析.ipynb
+│   ├── 02_特征工程与数据预处理.ipynb
+│   ├── 03_模型训练与评估.ipynb
+│   └── 04_模型解释与业务建议.ipynb
+├── model_output/              # 模型输出
+│   ├── best_lightgbm_model.pkl
+│   ├── model_metrics.json
+│   └── feature_importance.png
+├── src/                       # 工具函数
+│   ├── data_cleaning.py       # 数据清洗函数
+│   ├── feature_engineering.py # 特征工程函数
+│   └── model_utils.py         # 模型工具函数
+├── run_full_pipeline.py       # 一键运行脚本
+├── requirements.txt           # 依赖清单
+└── README.md                  # 项目说明
