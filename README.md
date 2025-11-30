@@ -1,4 +1,4 @@
-# 电信客户流失预测项目（Customer Churn Prediction）
+# Customer Churn Prediction
 
 ## 🧠 项目背景
 随着电信市场竞争加剧，客户流失成为影响收入的关键问题。本项目旨在基于历史通信数据构建客户流失预测模型，识别高风险客户，提出可执行的挽留策略。
