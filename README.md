@@ -51,15 +51,15 @@
   3. 优化高额账单客户服务体验；
   4. 建立流失预警评分系统。
 
-## ⚙️ 运行方式
+## 运行方式
 ```bash
 # 环境安装
 pip install -r requirements.txt
 
-# 运行顺序1
+# 运行方式1
 1. Visualization_Analysis.py（数据清洗与分析）
 2. Data_Preprocessing.py
 3. Training_Model.py
 
-# 运行顺序2
+# 运行方式2
 churn_prediction.ipynb
