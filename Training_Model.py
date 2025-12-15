@@ -197,7 +197,7 @@ def train_random_forest(X_train_scaled, y_train, X_val_scaled, y_val, selected_f
         'min_samples_leaf': randint(1, 5)
     }
 
-    print("🔧 正在进行随机搜索调参...")
+    print("正在进行随机搜索调参...")
     rf_random = RandomizedSearchCV(
         estimator=RandomForestClassifier(random_state=42, n_jobs=-1),
         param_distributions=rf_param_dist,
