@@ -50,11 +50,32 @@
 | XGBoost | 0.923000 | 泛化能力好，性能强 |
 | LightGBM | 0.929100 | 最优 AUC，训练速度快 |
 
-- GridSearchCV、RandomizedSearchCV、5-Fold Cross Validation；
+- 使用GridSearchCV、RandomizedSearchCV进行超参数调优；
+- 采用 5-Fold Cross Validation 验证模型稳定性；
 - 输出混淆矩阵、ROC 曲线、重要特征排序；
 - 保存最佳模型用于预测。
 
+##  关于时间维度与模型适用性的说明
+本项目基于用户当前的静态行为与消费特征构建流失预测模型，未引入显式时间序列数据。
+
+该建模方式在真实业务中具有明确适用场景，如：
+- 数据基础尚未完全建设完成的阶段；
+- 作为流失预警系统的第一版快速上线方案；
+- 用于高风险用户的初步筛选与排序。
+模型在 Kaggle 独立测试集上取得较高 AUC，验证了在当前特征条件下模型具备良好的区分能力。
+
+在真实业务中，若引入用户行为趋势特征，模型可进一步升级为动态流失预警模型。
 ##  模型解释与业务建议
+输出内容包括：
+- 用户级流失概率（churn_probability）
+- 流失风险等级（低 / 中 / 高 / 极高）
+- 主要流失原因（基于 SHAP 解释）
+示例输出：
+| 模型customer_id	| churn_probability	| risk_level	| top_reasons |
+CUST_102	0.92	极高风险	customer_service_calls(增加); monthly_charges(增加)
+CUST_211	0.67	高风险	international_plan(增加); total_charges(增加)
+
+注：模型输出概率主要用于风险排序与分级，作为运营决策参考，而非严格意义上的真实发生概率。
 - 使用逻辑回归系数 / 树模型特征重要度分析影响因素；
 - 对流失用户画像建模；
 - 主要建议：
