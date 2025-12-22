@@ -1,3 +1,6 @@
+📊 Customer Churn Prediction
+
+本项目基于 Kaggle Telecom Churn 数据集，通过端到端的机器学习流程构建客户流失预测模型，重点不在于单一模型效果，而在于构建一个 可解释、可落地、可复现、可指导运营决策的客户流失预测与风险预警体系。
 # Customer Churn Prediction
 
 本项目基于 Kaggle Telecom Churn 数据集，通过端到端的机器学习流程构建高精度客户流失预测模型。
